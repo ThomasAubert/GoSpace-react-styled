@@ -21,6 +21,7 @@ const InfoSection = ({
                 </Subtitle>
                 <BtnWrapper>
                   <Button to='home'
+                    //-- If With Scroll --
                     smooth={true}
                     duration={500}
                     spy={true}

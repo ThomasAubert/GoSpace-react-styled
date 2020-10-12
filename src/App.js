@@ -10,7 +10,7 @@ function App(){
     <Router>
       <Switch>
         <Route path='/' component={Home} exact />
-        <Route path='/' component={JoinUs} exact />
+        <Route path='/joinus' component={JoinUs} exact />
       </Switch>
     </Router>
   );

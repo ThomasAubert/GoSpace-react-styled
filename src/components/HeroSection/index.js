@@ -21,7 +21,7 @@ const HeroSection = () => {
           Be part of this incredible journey
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='joinus' onMouseEnter={onHover}
+          <Button to='home' onMouseEnter={onHover}
           onMouseLeave={onHover}
           primary='true' dark='true'>
             Join us now {hover ? <ArrowForward /> : <ArrowRight />}

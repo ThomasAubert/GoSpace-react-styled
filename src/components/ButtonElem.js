@@ -13,6 +13,7 @@ export const Button = styled(Link)`
   font-size: ${({fontBig})=> (fontBig ? '20px' : '16px')};
   justify-content: center;
   outline: none;
+  text-decoration: none;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
 
