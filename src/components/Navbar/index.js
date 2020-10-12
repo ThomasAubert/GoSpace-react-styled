@@ -1,14 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu,
   NavItem, NavLinks, NavBtn, NavBtnLink } from './Navbar';
+import {IconContext} from 'react-icons/lib';
+import {animateScroll as scroll} from 'react-scroll';
+
 
 const Navbar = ({toggle}) => {
+  const [scrollNav, setScrollNav] = useState(false);
+  
+  const onScroll = () => {
+    if(window.scrollY >= 80){
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+  }, []);
+    
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <>
-      <Nav>
+    <IconContext.Provider value={{ color: '#fff'}}>
+      <Nav scrollNav={scrollNav}>
         <NavBarContainer>
-          <NavLogo to='/'>
+          <NavLogo to='/' onClick={toggleHome}>
             GoSpace
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -16,17 +38,35 @@ const Navbar = ({toggle}) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>
+              <NavLinks to='about'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}
+              >
                 About
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover'>
+              <NavLinks to='discover'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}
+              >
                 Discover
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'>
+              <NavLinks to='services'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={-80}
+              >
                 Services
               </NavLinks>
             </NavItem>
@@ -36,6 +76,7 @@ const Navbar = ({toggle}) => {
           </NavBtn>
         </NavBarContainer>
       </Nav>
+    </IconContext.Provider>
     </>
   );
 }
