@@ -15,16 +15,16 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                   Who we are
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                  Where we are
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                  What we do
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                   Terms & Conditions
                 </FooterLink>              
             </FooterLinkItems>
@@ -32,16 +32,16 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                   Contact
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                  Training center
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                  Operations
                 </FooterLink>
-                <FooterLink to='/bla'>
+                <FooterLink to='/'>
                   Housing
                 </FooterLink>              
             </FooterLinkItems>
